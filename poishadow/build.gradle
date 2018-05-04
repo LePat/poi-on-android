@@ -39,6 +39,9 @@ shadowJar {
     // java.awt is not available, but class Color is used in APIs in POI, therefore
     // relocate this class to another one where we can include a rewrite
     relocate 'java.awt.Color', 'org.apache.poi.java.awt.Color'
+    relocate 'java.awt.font.FontRenderContext', 'org.apache.poi.java.awt.font.FontRenderContext'
+    relocate 'java.awt.font.TextLayout', 'org.apache.poi.java.awt.font.TextLayout'
+    relocate 'java.awt.geom.Rectangle2D', 'org.apache.poi.java.awt.geom.Rectangle2D'
 }
 
 jar.dependsOn shadowJar
